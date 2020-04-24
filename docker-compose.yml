@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+    app:
+        dns:
+            - 8.8.8.8
+        network_mode: "bridge"
+        volumes:
+            - ./app:/app
+        build:
+            context: ./
+            dockerfile: Dockerfile
+        tty: true
